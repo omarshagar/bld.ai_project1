@@ -273,7 +273,7 @@ body {
             align-items: center;
     }
         #header {
-            overflow: auto;
+           
            flex-direction:column-reverse;
             justify-content: center;
                 align-items: center;
