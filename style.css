@@ -2,6 +2,7 @@ body {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+    min-width: 210px;
 }
 #udemy
 {
@@ -141,8 +142,6 @@ body {
         display: flex;
         margin-top: 1%;
         width: 75%;
-       
-            
         background:#f8f9fb ;
 }
  #header-main-img
