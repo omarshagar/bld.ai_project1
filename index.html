@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+
 		<title>Udemy Elghalaba</title>
 	</head>
 	<body>
@@ -29,7 +30,7 @@
 				</button>
 
 				<form class="search-bar" action="">
-					<button type="submit" class="nav-bar-btn-srch">
+					<button type="button" class="nav-bar-btn-srch" id="searchbt">
 						<span> Search </span>
 					</button>
 					<input
@@ -98,9 +99,11 @@
 				<div id="specific-courses">
 					<div style="max-width: 60%">
 						<div class="txt-udemy">
-							<h1>Expand your career opportunities with Python</h1>
+							<h1 id="category-header">
+								Expand your career opportunities with Python
+							</h1>
 						</div>
-						<div class="txt-udemy">
+						<div id="category-description" class="txt-udemy">
 							Take one of Udemy’s range of Python courses and learn how to code
 							using this incredibly useful language. Its simple syntax and
 							readability makes Python perfect for Flask, Django, data science,
@@ -111,11 +114,13 @@
 					</div>
 					<div>
 						<div class="nav-bar-btn3">
-							<a class="nav-bar-link" href=""><b>Explore python</b></a>
+							<a class="nav-bar-link" id="explore-course" href=""
+								><b>Explore python</b></a
+							>
 						</div>
 					</div>
-					<div class="courses-viewer">
-						<div class="course-card">
+					<div class="courses-viewer" id="courses-viewer">
+						<div class="course-card" id="standard-course-card">
 							<div>
 								<a href=""
 									><img
@@ -126,147 +131,7 @@
 								</a>
 							</div>
 							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href=""
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href=""
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href=""
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href=""
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href=""
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
+								<h3></h3>
 							</div>
 							<div class="course-author">Lorem, ipsum.</div>
 							<div class="course-rating">
@@ -287,6 +152,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="script.js"></script>
 	</body>
 </html>
 

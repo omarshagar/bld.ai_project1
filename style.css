@@ -1,313 +1,275 @@
 body {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    min-width: 210px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	min-width: 210px;
 }
-#udemy
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#udemy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-#nav-bar{
-    
-    display: flex;
-    width: 100%;
-    justify-content:center;
-    align-items: center;
-    height: 72px;
-    min-width: fit-content;
-    box-shadow: 10px 2px 10px 4px rgb(197, 197, 197)  ;
+#nav-bar {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 72px;
+	min-width: fit-content;
+	box-shadow: 10px 2px 10px 4px rgb(197, 197, 197);
 }
-.general{
-    max-width: 100%;
-    max-height: 100%;
+.general {
+	max-width: 100%;
+	max-height: 100%;
 }
-#shorted-bar
-{
-   
-        margin-top: 20px;
-        margin-bottom: 20px;
-        height: 75%;
-        display: none;
-       
+#shorted-bar {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 75%;
+	display: none;
 }
-#udemy-logo
-{
-    min-width: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 25px;
-    width: 100px;
+#udemy-logo {
+	min-width: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 25px;
+	width: 100px;
 }
-.nav-bar-btn
-{
-    background-color: #ffffff;
-        border: none;
-        color: rgb(0, 0, 0);
-        padding: 15px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        font-size: 12px;
-        
+.nav-bar-btn {
+	background-color: #ffffff;
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 15px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 12px;
 }
-.nav-bar-btn:hover
-{
-    color: rgb(158, 9, 238);
+.nav-bar-btn:hover {
+	color: rgb(158, 9, 238);
 }
-.search-bar
-{
-    flex-grow: 3;
-    box-sizing: border-box;
-        margin: 0;
-    display: flex;
-    align-items: center;
-    border-style: solid;
-    border-width: 1.5px;
-    border-radius: 60px;
-    background-color: #f7f9fa;
+.search-bar {
+	flex-grow: 3;
+	box-sizing: border-box;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	border-style: solid;
+	border-width: 1.5px;
+	border-radius: 60px;
+	background-color: #f7f9fa;
 }
-.search-input
-{
-    flex: 20;
-    border: none;
-    display: inline;
-    margin-left: 20px;
-    margin-right: 5px;
-    background-color: #f7f9fa;
+.search-input {
+	flex: 20;
+	border: none;
+	display: inline;
+	margin-left: 20px;
+	margin-right: 5px;
+	background-color: #f7f9fa;
 }
 .search-input:focus {
-    outline: none;
+	outline: none;
 }
 .nav-bar-btn-srch {
-    background-color: #ffffff;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 60px;
+	background-color: #ffffff;
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 15px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 60px;
 }
 .nav-bar-btn-srch:hover {
-    color: rgb(158, 9, 238);
+	color: rgb(158, 9, 238);
 }
-.nav-bar-btn2
-{
-    width:20px;
-    margin-top: 25px;
-    margin-left: 10px;
+.nav-bar-btn2 {
+	width: 20px;
+	margin-top: 25px;
+	margin-left: 10px;
 }
-.nav-bar-btn3
-{
-    margin-left: 12px ;
-    border: 1px black solid;
-    min-width :75px;
-    height: 40px;
-    display: inline-flex;
-        justify-content: center;
-            align-items: center;
-    margin-top: 15px;
+.nav-bar-btn3 {
+	margin-left: 12px;
+	border: 1px black solid;
+	min-width: 75px;
+	height: 40px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
 }
-.nav-bar-btn3:hover
-{
-    background-color: aliceblue;
+.nav-bar-btn3:hover {
+	background-color: aliceblue;
 }
-.nav-bar-link
-{
-    text-decoration: none;
-    color: black;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 12px;
+.nav-bar-link {
+	text-decoration: none;
+	color: black;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+}
+.hidden-link {
+	text-decoration: none;
+	color: black;
+}
+.hidden-link:hover {
+	color: rgb(158, 9, 238);
+}
+#header {
+	display: flex;
+	margin-top: 1%;
+	width: 75%;
+	background: #f8f9fb;
+}
+#header-main-img {
+	order: 1;
+	margin-left: 20%;
+	width: 100%;
+	overflow: auto;
+}
+#header > #header-main-txt {
+	box-shadow: 4px 1px 4px 1px rgb(197, 197, 197);
+	background-color: white;
+	margin-top: 5%;
+	margin-left: 5%;
 
+	width: 20%;
+	max-width: 20%;
+	height: fit-content;
 }
-.hidden-link
-{
-    text-decoration: none;
-    color: black;
+.txt-udemy {
+	margin-left: 2%;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.hidden-link:hover
-{
-    color: rgb(158, 9, 238);
+#courses {
+	margin-top: 10px;
+	min-width: 50%;
+	width: 75%;
 }
-#header
-{
-        display: flex;
-        margin-top: 1%;
-        width: 75%;
-        background:#f8f9fb ;
-}
- #header-main-img
-{
-   order : 1 ;
-    margin-left: 20%;
-    width: 100%;
-    overflow: auto;
-  
-}
-#header > #header-main-txt { 
-    box-shadow: 4px 1px 4px 1px rgb(197, 197, 197);
-    background-color: white;
-    margin-top: 5%;
-    margin-left: 5%;
-   
-    width: 20%;
-    max-width: 20%;
-    height: fit-content;
-
-}
-.txt-udemy
-{
-   margin-left: 2%;;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-#courses
-{
-           
-            margin-top: 10px;
-            min-width: 50%;
-            width: 75%;
-}
-#specific-courses
-{
-   margin-top: 1%;
-    border: .5px solid rgba(184, 184, 184, 0.827);
+#specific-courses {
+	margin-top: 1%;
+	border: 0.5px solid rgba(184, 184, 184, 0.827);
 }
 .courses-viewer {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: auto;
 }
-
+#standard-course-card {
+	display: none;
+}
 .course-card {
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
 
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-width: 150px;
-    width: 20%;
-    height: fit-content;
-    
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-width: 150px;
+	width: 20%;
+	height: fit-content;
 }
-.course-img
-{
-    border: .25px solid rgba(169, 169, 169, 0.705);
-     width: 100%;
-        
-     max-height: 100%;
-     margin-bottom: 0;
+.course-img {
+	border: 0.25px solid rgba(169, 169, 169, 0.705);
+	width: 100%;
 
+	max-height: 100%;
+	margin-bottom: 0;
 }
-.course-title
-{
-    font-size: 12px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    max-width: inherit;
-    margin-top: 0px;
+.course-title {
+	font-size: 12px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	max-width: inherit;
+	margin-top: 0px;
 }
-.course-author{
-    font-size: 12px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-        max-width: inherit;
-        margin-top: -15px;
-        color: rgb(142, 142, 142);
+.course-author {
+	font-size: 12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	max-width: inherit;
+	margin-top: -15px;
+	color: rgb(142, 142, 142);
 }
-.course-price
-{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
+.course-price {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-.course-rating
-{
-    color: orange;
+.course-rating {
+	color: orange;
 }
-.categories
-{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 16px;
-    color: rgb(91, 91, 91);
-    margin-right: 1%;
-    margin-left: 1%;
-    margin-top: 2%;
-    margin-bottom: 1%;
+.categories {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 16px;
+	color: rgb(91, 91, 91);
+	margin-right: 1%;
+	margin-left: 1%;
+	margin-top: 2%;
+	margin-bottom: 1%;
 }
 @media screen and (max-width: 825px) {
-    #udemy-logo {
-            order: 1;
-            margin-right: 5%;
-           
-        }
-    .nav-bar-btn{
-        display: none;
-    }
-    .search-bar
-    {
-        display: none;
-    }
-    .nav-bar-btn2
-    {
-        display: none;
-    }
-    .nav-bar-btn3 {
-             display: none;
-    }
-    #shorted-bar {
-        display: inline;
-       margin-left: 20px;
-        flex-grow: 1;
-    }
-    #nav-bar {
-        justify-content: center;
-            align-items: center;
-    }
-        #header {
-           
-           flex-direction:column-reverse;
-            justify-content: center;
-                align-items: center;
-                align-content: center;
-            border: .5px solid rgba(184, 184, 184, 0.827);
-            box-shadow: 2px 2px 1px 1px  rgb(197, 197, 197);
-            margin-top: 10px;
-            margin-left: 0%;
-            width: 90%;
-            height: 100%;
-            background: #f8f9fb;
-        }
-        #header-main-img {
-                    
-                    align-self: center;
-                    order: 1;
-                   height: 100%;
-                   width: 100%;
-                   max-width: 100%;
-                   margin-left: 1%;
-                   margin-right: 1%;
-                   
-         }
-         #header > #header-main-txt{
-            order: 0;    
-                margin-left: 0%;
-                width: 100%;
-                max-width: 100%;
-                height: fit-content;
-                box-shadow: none;
-         }
-         #courses
-         {
-            width:90%;
-             overflow: auto;
-         }
-
+	#udemy-logo {
+		order: 1;
+		margin-right: 5%;
+	}
+	.nav-bar-btn {
+		display: none;
+	}
+	.search-bar {
+		display: none;
+	}
+	.nav-bar-btn2 {
+		display: none;
+	}
+	.nav-bar-btn3 {
+		display: none;
+	}
+	#shorted-bar {
+		display: inline;
+		margin-left: 20px;
+		flex-grow: 1;
+	}
+	#nav-bar {
+		justify-content: center;
+		align-items: center;
+	}
+	#header {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		border: 0.5px solid rgba(184, 184, 184, 0.827);
+		box-shadow: 2px 2px 1px 1px rgb(197, 197, 197);
+		margin-top: 10px;
+		margin-left: 0%;
+		width: 90%;
+		height: 100%;
+		background: #f8f9fb;
+	}
+	#header-main-img {
+		align-self: center;
+		order: 1;
+		height: 100%;
+		width: 100%;
+		max-width: 100%;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	#header > #header-main-txt {
+		order: 0;
+		margin-left: 0%;
+		width: 100%;
+		max-width: 100%;
+		height: fit-content;
+		box-shadow: none;
+	}
+	#courses {
+		width: 90%;
+		overflow: auto;
+	}
 }
