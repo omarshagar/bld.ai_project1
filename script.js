@@ -19,20 +19,20 @@ const fetch_json = async (url) => {
 
 function draw_json_from_title(title) {
 	let url = api_url[title];
-	let json = JSON.parse(localStorage.getItem(title));
+	/*let json = JSON.parse(localStorage.getItem(title));
 	if (json) {
 		draw_category_section(json, title);
-	} else {
-		let thejson;
-		fetch_json(url)
-			.then((json) => {
-				localStorage.setItem(title, JSON.stringify(json));
-				thejson = json;
-			})
-			.then(() => {
-				draw_category_section(thejson, title);
-			});
-	}
+	} else {*/
+	let thejson;
+	fetch_json(url)
+		.then((json) => {
+			localStorage.setItem(title, JSON.stringify(json));
+			thejson = json;
+		})
+		.then(() => {
+			draw_category_section(thejson, title);
+		});
+	//}
 }
 function draw_category_section(category, title) {
 	let tit = document.querySelector("#category-header");

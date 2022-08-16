@@ -1297,6 +1297,21 @@
 				"price": 19.99
 			},
 			{
+				"id": 396876,
+				"title": "Learning Python for Data Analysis and Visualization",
+				"headline": "Learn python and how to use it to analyze,visualize and present data. Includes tons of sample code and hours of video!",
+				"rating": 4.3899083,
+				"image": "https://img-c.udemycdn.com/course/750x422/396876_cc92_7.jpg",
+				"instructors": [
+					{
+						"name": "Jose Portilla",
+						"jop": "Head of Data Science at Pierian Training",
+						"image": "https://img-c.udemycdn.com/user/100x100/9685726_67e7_4.jpg"
+					}
+				],
+				"price": 19.99
+			},
+			{
 				"id": 405878,
 				"title": "Python for Beginners - Learn Programming from scratch",
 				"headline": "Python For Beginners : This course is meant for absolute beginners in programming or in python.",
