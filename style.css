@@ -103,6 +103,18 @@ body {
 	align-items: center;
 	margin-top: 15px;
 }
+#signup-btn {
+	background-color: black;
+}
+#signup-btn > a {
+	color: white;
+}
+#header-main-img > img {
+	max-width: 80%;
+}
+#specific-courses:div {
+	max-width: 60%;
+}
 .nav-bar-btn3:hover {
 	background-color: aliceblue;
 }

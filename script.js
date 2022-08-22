@@ -1,12 +1,3 @@
-/*fetch(url)
-		.then((response) => response.json())
-		.then((json) => console.log(json));
-        fetch_json("http://localhost:3000/Python").then((value) => {
-	console.log(value);
-});
-        
-        
-        */
 const api_url = {
 	python: "http://localhost:3000/Python",
 };
@@ -19,10 +10,7 @@ const fetch_json = async (url) => {
 
 function draw_json_from_title(title) {
 	let url = api_url[title];
-	/*let json = JSON.parse(localStorage.getItem(title));
-	if (json) {
-		draw_category_section(json, title);
-	} else {*/
+
 	let thejson;
 	fetch_json(url)
 		.then((json) => {
@@ -32,7 +20,6 @@ function draw_json_from_title(title) {
 		.then(() => {
 			draw_category_section(thejson, title);
 		});
-	//}
 }
 function draw_category_section(category, title) {
 	let tit = document.querySelector("#category-header");
@@ -72,18 +59,6 @@ function get_authors(autor) {
 
 	return ret.substring(0, ret.length - 2);
 }
-function is_substr(big_str, str) {
-	console.log(big_str);
-	if (big_str.length == 0) return false;
-	if (str.length == 0) return true;
-	for (let i = 0; i < big_str.length; i++) {
-		for (let j = 0, k = i; j < str.length && k < big_str.length; j++, k++) {
-			if (big_str[k] != str[j]) break;
-			if (j == str.length - 1) return true;
-		}
-	}
-	return false;
-}
 function extract_txt_from_form() {
 	let ret = "";
 	let bar = document.querySelector(".search-bar > .search-input");
@@ -96,7 +71,7 @@ function disable_some_cards(str) {
 		let title = card.querySelector(".course-title > h3");
 		let tit = title.textContent;
 
-		if (is_substr(tit, str)) {
+		if (tit.includes(str)) {
 			card.style.display = "flex";
 		} else {
 			card.style.display = "none";

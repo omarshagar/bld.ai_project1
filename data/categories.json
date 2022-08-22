@@ -1,0 +1,28 @@
+{
+	"catrgories": [
+		{
+			"name": "python",
+			"title": "python"
+		},
+		{
+			"name": "exel",
+			"title": "Exel"
+		},
+		{
+			"name": "webDevelopment",
+			"title": "Web Development"
+		},
+		{
+			"name": "javaScript",
+			"title": "java script"
+		},
+		{
+			"name": "aws",
+			"title": "Aws"
+		},
+		{
+			"name": "drawing",
+			"title": "Drawing"
+		}
+	]
+}
