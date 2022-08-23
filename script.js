@@ -16,6 +16,7 @@ const categoties = [
 	"Drawing",
 	"DataScience",
 ];
+let current_category = "Python";
 const fetch_json = async (url) => {
 	let response = await fetch(url);
 	let json = await response.json();
@@ -24,7 +25,7 @@ const fetch_json = async (url) => {
 
 function draw_json_from_title(title) {
 	let url = api_url[title];
-
+	current_category = title;
 	let thejson;
 	fetch_json(url)
 		.then((json) => {
@@ -36,9 +37,38 @@ function draw_json_from_title(title) {
 		});
 }
 
-function clear_all_childs_except_first_x(x, parent) {
-	while (parent.childElementCount > x) {
-		parent.removeChild(parent.lastElementChild);
+function clear_all_childs(parent) {
+	parent.innerHTML = "";
+}
+function draw_crusol_item() {
+	let cr_item = document.createElement("div");
+	cr_item.classList.add("carousel-item");
+	let rw = document.createElement("div");
+	rw.classList.add("row");
+	cr_item.appendChild(rw);
+	return cr_item;
+	//cr_item.classList.add("justify-content-center");
+}
+function draw_cursel_elements(courses, course_viewer) {
+	let courses_cnt = courses.length;
+	let width = window.innerWidth;
+	let card_width = 300;
+	let tot_cards_per_item = Math.floor(width / card_width);
+	let items_cnt = Math.ceil(courses_cnt / tot_cards_per_item);
+	let j = 0;
+	for (let i = 0; i < items_cnt; i++) {
+		let cr_item = 0;
+		cr_item = draw_crusol_item();
+		if (i == 0) cr_item.classList.add("active");
+		let k = tot_cards_per_item;
+		while (k-- && j < courses_cnt) {
+			let element = courses[j];
+			let card = create_course_card(element);
+
+			j++;
+			cr_item.querySelector(".row").appendChild(card);
+		}
+		course_viewer.appendChild(cr_item);
 	}
 }
 function draw_category_section(category, title) {
@@ -49,26 +79,23 @@ function draw_category_section(category, title) {
 	let btn = document.querySelector("#explore-course");
 	btn.innerHTML = `<b>  explore ${title}  </b>`;
 	let courses = category.courses;
-	let parent = document.querySelector("#courses-viewer");
-	clear_all_childs_except_first_x(1, parent);
-	courses.forEach((element) => {
-		card = create_course_card(element);
-		parent.appendChild(card);
-	});
+	let parent = document.querySelector(".carousel-inner");
+	clear_all_childs(parent);
+	draw_cursel_elements(courses, parent);
 }
 function create_course_card(card_data) {
 	let course_card = document.querySelector("#standard-course-card");
 	let new_card = course_card.cloneNode(true);
-	new_card.setAttribute("id", "");
 	new_card.style.display = "flex";
 	let img = new_card.querySelector(".course-img");
 	img.setAttribute("src", card_data.image);
-	let title = new_card.querySelector(".course-title > h3");
+	let title = new_card.querySelector(".course-title > h4");
 	title.textContent = card_data.title;
 	let price = new_card.querySelector(".course-price > b");
 	price.textContent = card_data.price;
 	let author = new_card.querySelector(".course-author");
 	author.textContent = get_authors(card_data.instructors);
+	new_card.classList.add("col");
 	return new_card;
 }
 function get_authors(autor) {
@@ -111,6 +138,7 @@ function draw_category(txt) {
 	let anch = document.createElement("a");
 	anch.classList.add("nav-link");
 	anch.classList.add("category-clickable-link");
+	anch.role = "button";
 	anch.href = "javascript:void(0)";
 	anch.textContent = txt;
 	item.appendChild(anch);
@@ -135,8 +163,8 @@ function clear_active_all_cat() {
 	});
 }
 
-draw_json_from_title("Python");
-draw_cat_navbar_from_json("Python");
+draw_json_from_title(current_category);
+draw_cat_navbar_from_json(current_category);
 
 let cat_links = document.querySelectorAll(".category-clickable-link");
 for (let i = 0; i < cat_links.length; i++) {
@@ -147,3 +175,7 @@ for (let i = 0; i < cat_links.length; i++) {
 		draw_json_from_title(cat_links[i].textContent);
 	});
 }
+
+window.addEventListener("resize", (event) => {
+	draw_json_from_title(current_category);
+});
