@@ -79,6 +79,8 @@ function draw_category_section(category, title) {
 	let btn = document.querySelector("#explore-course");
 	btn.innerHTML = `<b>  explore ${title}  </b>`;
 	let courses = category.courses;
+	let search_word = extract_txt_from_form();
+	courses = filter(courses, search_word);
 	let parent = document.querySelector(".carousel-inner");
 	clear_all_childs(parent);
 	draw_cursel_elements(courses, parent);
@@ -114,7 +116,8 @@ function extract_txt_from_form() {
 function disable_some_cards(str) {
 	let cards = document.querySelectorAll(".course-card");
 	cards.forEach((card) => {
-		let title = card.querySelector(".course-title > h3");
+		let title = card.querySelector(".course-title > h4");
+
 		let tit = title.textContent;
 
 		if (tit.includes(str)) {
@@ -124,14 +127,19 @@ function disable_some_cards(str) {
 		}
 	});
 }
-function filter() {
-	let str = extract_txt_from_form();
-	disable_some_cards(str);
+function filter(courses, search_wrd) {
+	let new_courses = [];
+	for (let i = 0; i < courses.length; i++) {
+		if (courses[i]["title"].toLowerCase().includes(search_wrd.toLowerCase())) {
+			new_courses.push(courses[i]);
+		}
+	}
+	return new_courses;
 }
 
 let btn_search = document.querySelector("#searchbt");
 btn_search.addEventListener("click", () => {
-	filter();
+	draw_json_from_title(current_category);
 });
 function draw_category(txt) {
 	let item = document.createElement("li");
