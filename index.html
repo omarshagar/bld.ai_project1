@@ -4,17 +4,26 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Udemy Elghalaba</title>
 	</head>
 	<body>
+		
 		<div id="udemy">
 			<div id="nav-bar">
 				<div id="shorted-bar" class="general">
-					<img src="images/list.png" class="general" alt="" />
+					<img src="images/list.png" class="general" alt="menu" />
 				</div>
+
 				<div id="udemy-logo" class="general">
-					<a href="https://www.udemy.com/">
+					<a href="">
 						<img
 							class="general"
 							src="images/Udemy_logo.svg.png"
@@ -22,12 +31,13 @@
 						/>
 					</a>
 				</div>
+
 				<button class="nav-bar-btn">
 					<span> Categories </span>
 				</button>
 
 				<form class="search-bar" action="">
-					<button type="submit" class="nav-bar-btn-srch">
+					<button type="button" class="nav-bar-btn-srch" id="searchbt">
 						<span> Search </span>
 					</button>
 					<input
@@ -40,21 +50,13 @@
 				</form>
 
 				<button class="nav-bar-btn">
-					<span
-						><a href="https://business.udemy.com" class="hidden-link"
-							>Udemy Business</a
-						></span
-					>
+					<span><a href="" class="hidden-link">Udemy Business</a></span>
 				</button>
 				<button class="nav-bar-btn">
-					<span>
-						<a href="https://www.udemy.com/teaching/" class="hidden-link"
-							>Teach on Udemy</a
-						></span
-					>
+					<span> <a href="" class="hidden-link">Teach on Udemy</a></span>
 				</button>
 				<div class="nav-bar-btn2">
-					<a href="https://www.udemy.com/cart/"
+					<a href=""
 						><img
 							class="general"
 							src="images/shopping-cart.png"
@@ -62,17 +64,10 @@
 					/></a>
 				</div>
 				<div class="nav-bar-btn3">
-					<a class="nav-bar-link" href="https://www.udemy.com/join/login-popup"
-						><b>Log in</b></a
-					>
+					<a class="nav-bar-link" href=""><b>Log in</b></a>
 				</div>
-				<div class="nav-bar-btn3" style="background-color: black">
-					<a
-						style="color: white"
-						class="nav-bar-link"
-						href="https://www.udemy.com/join/signup-popup/"
-						><b>Sign Up</b></a
-					>
+				<div id="signup-btn" class="nav-bar-btn3">
+					<a class="nav-bar-link" href=""><b>Sign Up</b></a>
 				</div>
 			</div>
 			<div id="header">
@@ -97,12 +92,25 @@
 						published every month
 					</div>
 				</div>
-				<div id="specific-courses">
-					<div style="max-width: 600px">
-						<div class="txt-udemy">
-							<h1>Expand your career opportunities with Python</h1>
+				<div class="courses-viewer">
+					<nav class="navbar navbar-expand-lg bg-white">
+						<div class="container-fluid">
+							</button>
+							<div class="container" id="navbarNav">
+								<ul class="navbar-nav" id="category-navbar-list">
+								</ul>
+							</div>
 						</div>
+					</nav>
+				</div>
+				<div id="specific-courses">
+					<div>
 						<div class="txt-udemy">
+							<h1 id="category-header">
+								Expand your career opportunities with Python
+							</h1>
+						</div>
+						<div id="category-description" class="txt-udemy">
 							Take one of Udemy’s range of Python courses and learn how to code
 							using this incredibly useful language. Its simple syntax and
 							readability makes Python perfect for Flask, Django, data science,
@@ -113,15 +121,13 @@
 					</div>
 					<div>
 						<div class="nav-bar-btn3">
-							<a class="nav-bar-link" href="https://www.udemy.com/topic/python/"
-								><b>Explore python</b></a
-							>
+							<a class="nav-bar-link" id="explore-course" href=""
+								><b>Explore python</b></a>
 						</div>
 					</div>
-					<div id="courses-viewer">
-						<div class="course-card">
+					<div class="course-card" id="standard-course-card">
 							<div>
-								<a href="https://www.udemy.com/course/pythonforbeginners/"
+								<a href=""
 									><img
 										class="course-img"
 										src="images/index.png"
@@ -130,7 +136,7 @@
 								</a>
 							</div>
 							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
+								<h4></h4>
 							</div>
 							<div class="course-author">Lorem, ipsum.</div>
 							<div class="course-rating">
@@ -147,151 +153,85 @@
 							</div>
 							<div class="course-price"><b>20$</b></div>
 						</div>
-						<div class="course-card">
-							<div>
-								<a href="https://www.udemy.com/course/pythonforbeginners/"
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href="https://www.udemy.com/course/pythonforbeginners/"
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href="https://www.udemy.com/course/pythonforbeginners/"
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href="https://www.udemy.com/course/pythonforbeginners/"
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
-						<div class="course-card">
-							<div>
-								<a href="https://www.udemy.com/course/pythonforbeginners/"
-									><img
-										class="course-img"
-										src="images/index.png"
-										alt="course_img"
-									/>
-								</a>
-							</div>
-							<div class="course-title">
-								<h3>Learn Python: The Complete Python Programming Course</h3>
-							</div>
-							<div class="course-author">Lorem, ipsum.</div>
-							<div class="course-rating">
-								<link
-									rel="stylesheet"
-									href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-								/>
-
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<div class="course-price"><b>20$</b></div>
-						</div>
+					<div class="courses-viewer" id="courses-viewer">
+						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+		
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>		
 					</div>
 				</div>
 			</div>
+			<div id="top-categories" class="container">
+				<h2>Top categories</h2>
+    <section id = "top-categories2" class="row row-cols-xl-4  row-cols-lg-3 row-cols-md-2 ">
+        <div class="col">
+            <img class="top-cate" alt="Category image" src="https://s.udemycdn.com/home/top-categories/lohp-category-design-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-design-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg 2x">
+            <span class = "img-title">Design</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-development-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-development-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-development-2x-v2.jpg 2x">
+            <span class = "img-title">Development</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-marketing-2x-v2.jpg 2x">
+            <span class = "img-title">Marketing</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-2x-v2.jpg 2x">
+            <span class = "img-title">IT and Software</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-2x-v2.jpg 2x">
+            <span class = "img-title">Personal Development</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-business-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-business-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-business-2x-v2.jpg 2x">
+            <span class = "img-title">Business</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-photography-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-photography-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-photography-2x-v2.jpg 2x">
+            <span class = "img-title">Photography</span>
+        </div>
+        <div class="col">
+            <img class="top-cate" alt="Category image"  src="https://s.udemycdn.com/home/top-categories/lohp-category-music-v2.jpg" srcset="https://s.udemycdn.com/home/top-categories/lohp-category-music-v2.jpg 1x, https://s.udemycdn.com/home/top-categories/lohp-category-music-2x-v2.jpg 2x">
+            <span class = "img-title">Music</span>
+        </div>
+			</div>
 		</div>
+		<script src="script.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+			integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+			integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+			crossorigin="anonymous"
+		></script>
+		
 	</body>
+	
 </html>
 
-<!-- -->
+<!-- 
+
+	
+
+
+
+-->
